@@ -12,23 +12,19 @@ window.userPrompt(`Please select one of the following moves: ${choiceArray}`);
 
 //Read in players input.  Will use a const of rock for testing
     function userPrompt() {
-        var playerInput =  window.prompt(`Please select one of the following moves: ${choiceArray}`)
+        let playerInput =  window.prompt(`Please select one of the following moves: ${choiceArray}`)
         //Remove any unnecessary trailing and leading spaces and tabs from the user input
          playerInput =  playerInput.trim()
          // Strip the first letter can captilize it and covert the rest of the input to lowercase
          playerInput =  playerInput.charAt(0).toUpperCase() + playerInput.toLocaleLowerCase().slice(1);
          //Accept only an input of Rock Paper or Scissor
-        switch(playerInput){
-            case playerInput != "Rock" :
-            case playerInput != "Papper":
-            case playerInput != "Scissors":
-                console.log(`Invalid input: Please select either Rock Paper or Scissors`)
-                break;
-            default:
-                console.log(`You have selected ${playerInput}`);
-                return playerInput;
+        if (playerInput != "Rock" && playerInput != "Papper" && playerInput != "Scissors") {
+            console.log(`Invalid input: Please select either Rock Paper or Scissors`);
         }
-}
+        else
+            console.log(`You have selected ${playerInput}`);
+            return playerInput;
+    }
 //have the computer randomly pick a value of rock paper or scissor
 function computerplay() {
     //use the random number to select a choice from the array for the computer. Return the choice.
