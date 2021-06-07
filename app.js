@@ -6,15 +6,9 @@ function getRandomInt(max) {
 // Create an array of choices that the computer may pick from
 let choiceArray = ['Rock', 'Papper', 'Scissors'];
 
-// // declare a variable equal to the selecton for the player
-// const playerSelection = userPrompt();
-// // declare a variable equal to the selection of the computer
-// const computerSelection = computerplay();
-
 //Set the starting score for computer and player
 playerScore = 0;
 computerScore = 0;
-
 
 //function to read in users input and insure it is valid
 function userPrompt() {
@@ -83,8 +77,6 @@ function playRound(playerSelection, computerSelection) {
         return (`${computerSelection} beats ${playerSelection}. You lose.`)
     }
 }
-
-
 
 //create a function to loop the code 5 times
 function game() {
