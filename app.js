@@ -4,7 +4,7 @@ function getRandomInt(max) {
 }
 
 // Create an array of choices that the computer may pick from
-let choiceArray = ['Rock', 'Papper', 'Scissors'];
+let choiceArray = ['Rock', 'Paper', 'Scissors'];
 
 //Set the starting score for computer and player
 playerScore = 0;
@@ -20,7 +20,7 @@ function userPrompt() {
         // Strip the first letter can captilize it and covert the rest of the input to lowercase
         playerInput = playerInput.charAt(0).toUpperCase() + playerInput.toLocaleLowerCase().slice(1);
         //Accept only an input of Rock Paper or Scissor
-        if (playerInput != "Rock" && playerInput != "Papper" && playerInput != "Scissors") {
+        if (playerInput != "Rock" && playerInput != "Paper" && playerInput != "Scissors") {
             console.log(`Invalid input: Please select either Rock Paper or Scissors`);
             continue;
         }
@@ -50,8 +50,8 @@ function playRound(playerSelection, computerSelection) {
             computerScore++;
         return (`${computerSelection} beats ${playerSelection}. You lose.`)
     }
-    //if the player selects papper
-    if (playerSelection == "Papper") {
+    //if the player selects paper
+    if (playerSelection == "Paper") {
         if (computerSelection == playerSelection) {
             return (`You both selected ${playerSelection}. This round is a tie.`)
         }
@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
         if (computerSelection == playerSelection) {
             return (`You both selected ${playerSelection}. This round is a tie.`)
         }
-        else if (computerSelection == "Papper") {
+        else if (computerSelection == "Paper") {
             playerScore++;
             return (`${playerSelection} beats ${computerSelection}. You win!`)
         }
